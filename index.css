@@ -1,6 +1,11 @@
 body {       
     background-image: url('Images/space.jpg');
     background-size: cover;
+
+}
+
+h2 {
+    padding-bottom: 16px;
 }
 
 .titleImage1 {
