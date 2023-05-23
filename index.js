@@ -26,8 +26,15 @@ function removeItem() {
 function done() {
     this.className = "done";
     this.removeEventListener('click',done);
+ 
+
+    var el = document.createElement('li')
+    var val = document.getElementsByClassName("done").value;
+    el.innerHTML = val;
+    el.className = 'list-group-item';
+    document.getElementById('archive').append(el);
+
     this.append(complete);
-    moveItem();
 
   }
   
@@ -39,21 +46,5 @@ function init() {
     }
   }
 
-  function moveItem() {
+  
 
-      var origin = document.getElementById('tasks');
-      var target = document.getElementById('archive');
-      el = document.getElementById("listAdd").value;
-      if (el)
-        target.append(el);
-    }
-
-
-    function moveItem() {
-
-        var origin = document.getElementById('tasks');
-        var target = document.getElementById('archive');
-        el = document.getElementsByClassName("#done").value;
-        if (el)
-          target.append(el);
-      }
