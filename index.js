@@ -3,11 +3,20 @@ const complete= " :Completed " + Date();
 function addItem() {
     var el = document.createElement('li')
     var val = document.getElementById("listAdd").value;
+
+    if (val === ''){
+        alert("You did not identify what task you wanted to put on the list!")
+    } else {
+
     el.innerHTML = val;
     el.className = 'list-group-item';
     document.getElementById('list').append(el);
     el.addEventListener('click', done);
+    }
+
     event.preventDefault();
+
+
 
 
 }
