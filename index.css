@@ -1,0 +1,13 @@
+body {       
+    background-image: url('Images/space.jpg');
+    background-size: cover;
+}
+
+.titleImage1 {
+    padding-left: 2%;
+}
+.title {
+    color: aliceblue;
+    font-family: sans-serif;
+    font-size: 200%;
+}
