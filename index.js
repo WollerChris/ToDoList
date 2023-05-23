@@ -27,6 +27,8 @@ function done() {
     this.className = "done";
     this.removeEventListener('click',done);
     this.append(complete);
+    moveItem();
+
   }
   
   // Initialize all listener for current undone tasks
@@ -38,10 +40,20 @@ function init() {
   }
 
   function moveItem() {
-    const
-      origin = document.getElementById('tasks'),
-      target = document.getElementById('archive'),
-      el = origin.firstElementChild;
+
+      var origin = document.getElementById('tasks');
+      var target = document.getElementById('archive');
+      el = document.getElementById("listAdd").value;
       if (el)
         target.append(el);
     }
+
+
+    function moveItem() {
+
+        var origin = document.getElementById('tasks');
+        var target = document.getElementById('archive');
+        el = document.getElementsByClassName("#done").value;
+        if (el)
+          target.append(el);
+      }
