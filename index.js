@@ -1,3 +1,4 @@
+const complete= " :Completed " + Date();
 
 function addItem() {
     var el = document.createElement('li')
@@ -25,6 +26,7 @@ function removeItem() {
 function done() {
     this.className = "done";
     this.removeEventListener('click',done);
+    this.append(complete);
   }
   
   // Initialize all listener for current undone tasks
@@ -34,3 +36,12 @@ function init() {
       undoneItems[i].addEventListener('click', done);  
     }
   }
+
+  function moveItem() {
+    const
+      origin = document.getElementById('tasks'),
+      target = document.getElementById('archive'),
+      el = origin.firstElementChild;
+      if (el)
+        target.append(el);
+    }
