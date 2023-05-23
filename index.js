@@ -5,18 +5,32 @@ function addItem() {
     el.innerHTML = val;
     el.className = 'list-group-item';
     document.getElementById('list').append(el);
+    el.addEventListener('click', done);
+
+
     event.preventDefault()
+
+
 }
 
 function removeItem() {
-    // var a = document.getElementById("list");
-    // var val = document.getElementById("listAdd");
-    // var item = document.getElementById(val.value);
-    // a.removeChild(item);
-    // event.preventDefault()
-
     var val = document.getElementById("listAdd").value;
     el.innerHTML = val;
     document.getElementById('list').remove(el);
-    event.preventDefault()
+    event.preventDefault();
 }
+
+
+
+function done() {
+    this.className = "done";
+    this.removeEventListener('click',done);
+  }
+  
+  // Initialize all listener for current undone tasks
+function init() {
+    var undoneItems = document.getElementsByClassName('tasks');
+    for(var i = 0; i < undoneItems.length; i++){
+      undoneItems[i].addEventListener('click', done);  
+    }
+  }
