@@ -4,10 +4,23 @@ body {
 }
 
 .titleImage1 {
-    padding-left: 2%;
+    padding: 0% 2%;
+
 }
 .title {
-    color: aliceblue;
-    font-family: sans-serif;
+    color: black;
     font-size: 200%;
+    padding-left: 50px;
+
+}
+
+.columnClass1 {
+    padding-top: 2%;
+    color: aliceblue;
+}
+
+
+.columnClass2 {
+    padding-top: 2%;
+    color: aliceblue;
 }
