@@ -9,7 +9,7 @@ function addItem() {
     el.addEventListener('click', done);
 
 
-    event.preventDefault()
+    event.preventDefault();
 
 
 }
