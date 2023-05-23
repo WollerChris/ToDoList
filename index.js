@@ -8,12 +8,9 @@ function addItem() {
     event.preventDefault()
 }
 
-
-// Creating a function to remove item from list
 function removeItem() {
-    // Declaring a variable to get select element
     var a = document.getElementById("list");
-    var text = document.getElementById("listAdd");
-    var item = document.getElementById(text.value);
+    var val = document.getElementById("listAdd");
+    var item = document.getElementById(val.value);
     a.removeChild(item);
 }
