@@ -9,8 +9,14 @@ function addItem() {
 }
 
 function removeItem() {
-    var a = document.getElementById("list");
-    var val = document.getElementById("listAdd");
-    var item = document.getElementById(val.value);
-    a.removeChild(item);
+    // var a = document.getElementById("list");
+    // var val = document.getElementById("listAdd");
+    // var item = document.getElementById(val.value);
+    // a.removeChild(item);
+    // event.preventDefault()
+
+    var val = document.getElementById("listAdd").value;
+    el.innerHTML = val;
+    document.getElementById('list').remove(el);
+    event.preventDefault()
 }
